@@ -10,7 +10,11 @@ export default Ember.Controller.extend({
     };
 
     this.get(`heroes`).newHero(hero).then(() => {
+      this.clearForm();
       this.transitionToRoute(`index`);
     });
+  },
+  clearForm() {
+    this.set(`name`, ``);
   },
 });
