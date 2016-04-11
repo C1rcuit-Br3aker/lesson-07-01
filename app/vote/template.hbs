@@ -1,0 +1,13 @@
+<div>
+  <h1>My Heroes</h1>
+  <div>
+    {{#each model as |hero|}}
+      <li>
+        {{hero.score}}{{hero.name}}
+      <button class="fa fa-thumbs-up" {{action voteUp hero}}></button>
+
+      <button class="fa fa-thumbs-down" {{action voteDown hero}}></button>
+    </li>
+    {{/each}}
+  </div>
+</div>
